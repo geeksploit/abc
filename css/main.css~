@@ -1,0 +1,37 @@
+#image {
+  background: url('../img/abc.gif');
+}
+
+.box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 4em;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.button {
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  line-height: 50px;
+  background: #eeeeee;
+  display: inline-block;
+}
+
+.panel {
+  width: 75%;
+  margin-left: 12.5%;
+  text-align: center;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}

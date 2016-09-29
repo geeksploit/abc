@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru_RU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Система обучения цветовому алфавиту</h2>
+  <h4 class="hidden"><a href="#">Войти</a> в систему</h4>
+  <h4 class="hidden">Добро пожаловать, <span id="name"></span></h4>
+
+  <div class="panel">
+    <div id="color" class="box"></div>
+    <div id="image" class="box"></div>
+    <br /><div id="letter" class="box"></div>
+    <div id="sound" class="box hidden"></div>
+  </div>
+  
+  <div id="buttons" class="panel">
+    <div id="good" class="button">Хорошо</div>
+    <div id="bad" class="button">Плохо</div>
+    <div id="debug" class="" onclick="this.className += ' hidden';">[служебная информация]</div>
+  </div>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
