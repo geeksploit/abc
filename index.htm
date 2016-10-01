@@ -8,26 +8,48 @@
 <body>
 
 <div class="container">
+
   <h2>Система обучения цветовому алфавиту</h2>
   <h4 class="hidden"><a href="#">Войти</a> в систему</h4>
   <h4 class="hidden">Добро пожаловать, <span id="name"></span></h4>
 
   <div class="panel">
+    <div id="text"  class="">
+      <span>синоним1</span>
+      <span>синоним2</span>
+      <span>синоним3</span>
+    </div>
+    <br />
     <div id="color" class="box"></div>
-    <div id="image" class="box"></div>
-    <br /><div id="letter" class="box"></div>
+    <div id="gesture" class="box"></div>
+    <br />
+    <div id="letter" class="box"></div>
     <div id="sound" class="box hidden"></div>
+    <br />
+    <div id="image" class="transparent">
+      <div class="box">
+        <img src="img/placeholder.svg" alt="изображение1"></img>
+      </div>
+      <div class="box">
+        <img src="img/placeholder.svg" alt="изображение2"></img>
+      </div>
+      <div class="box">
+        <img src="img/placeholder.svg" alt="изображение3"></img>
+      </div>
+    </div>
   </div>
   
   <div id="buttons" class="panel">
-    <div id="good" class="button">Хорошо</div>
-    <div id="bad" class="button">Плохо</div>
-    <div id="debug" class="" onclick="this.className += ' hidden';">[служебная информация]</div>
+    <div id="good" class="button">&#x2713;</div>
+    <div id="bad" class="button">&nbsp;</div>
+    <div id="debug" class="transparent">[служебная информация]</div>
   </div>
 
 </div>
 
 <script src="js/data.js"></script>
+<script src="js/util.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
