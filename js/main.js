@@ -1,18 +1,34 @@
-var boxColor  = document.getElementById("color");
-var boxLetter = document.getElementById("letter");
-var boxImage  = document.getElementById("image");
+var boxColor   = document.getElementById('color');
+var boxGesture = document.getElementById('gesture');
+var boxImage   = document.getElementById('image');
+var boxLetter  = document.getElementById('letter');
 
 function drawChildren(index) {
 	boxColor.style.background = data[index].color;
+	boxGesture.style.backgroundImage = 'url(img/' + index + '.gif)';
 	boxLetter.innerHTML = data[index].letter;
-	boxImage.style.backgroundImage = 'url(img/' + index + '.gif)';
+	boxImage.style.opacity = 0;
+        setTimeout(fadeIn, 1000, boxImage, 2000);
 }
 
 var index = getRandom(10);
 drawChildren(index);
 
-var btnBad = document.getElementById("bad");
-var btnGood = document.getElementById("good");
+var btnBad  = document.getElementById('bad');
+var btnDbg  = document.getElementById('debug');
+var btnGood = document.getElementById('good');
+
+btnDbg.addEventListener('click', function() {
+  switch (this.style.opacity) {
+    case '':
+    case '0':
+      fadeIn(this);
+      break;
+    case '1':
+      fadeOut(this);
+      break;
+  }
+});
 
 btnBad.addEventListener('click', onClick);
 btnGood.addEventListener('click', onClick);
